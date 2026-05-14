@@ -1,1 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@theme {
+  --grid-template-columns-layout:70% 28%; 
+    
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
