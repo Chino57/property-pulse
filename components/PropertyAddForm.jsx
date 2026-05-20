@@ -35,7 +35,7 @@ const PropertyAddForm = () => {
 
     // Check if nested properties
     if (name.includes(".")) {
-      const [outerKey, innerKey] = name.split(",");
+      const [outerKey, innerKey] = name.split(".");
 
       setFields((prevFields) => ({
         ...prevFields,
@@ -86,13 +86,13 @@ const PropertyAddForm = () => {
 
     // updated state with array of images
     setFields((prevFields) => ({
-        ...prevFields,
-        images: updatedImages
-    }))
+      ...prevFields,
+      images: updatedImages,
+    }));
   };
 
   return (
-    <form>
+    <form action="/api/properties" method="POST" encType="multipart/form-data">
       <h2 className="text-3xl text-center font-semibold mb-6">Add Property</h2>
 
       <div className="mb-4">
@@ -486,7 +486,7 @@ const PropertyAddForm = () => {
         <input
           type="text"
           id="seller_name"
-          name="seller_info.name."
+          name="seller_info.name"
           className="border rounded w-full py-2 px-3"
           placeholder="Name"
           value={fields.seller_info.name}
@@ -540,6 +540,7 @@ const PropertyAddForm = () => {
           className="border rounded w-full py-2 px-3"
           accept="image/*"
           multiple
+          required
           onChange={handleImageChange}
         />
       </div>
