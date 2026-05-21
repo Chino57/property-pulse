@@ -359,7 +359,7 @@ const PropertyAddForm = () => {
               name="amenities"
               value="Dishwasher"
               className="mr-2"
-              checked={fields.amenities.includes("Dishwascher")}
+              checked={fields.amenities.includes("Dishwasher")}
               onChange={handleAmenitiesChange}
             />
             <label htmlFor="amenity_dishwasher">Dishwasher</label>
