@@ -29,11 +29,15 @@ git clone https://github.com/Chino57/property-pulse.git
 ```
 
 2. Installer les dépendances :
+```bash
 npm install
+```
 
 3. Configurer les variables d'environnement (créer un fichier .env.local et y ajouter vos clés, par exemple la chaine de connexion MongoDB).
 
-4. Lancer le serveur de développement : 
+4. Lancer le serveur de développement :
+```bash 
 npm run dev
+```
 
 5. Ouvrez http://localhost:3000 dans votre navigateur
